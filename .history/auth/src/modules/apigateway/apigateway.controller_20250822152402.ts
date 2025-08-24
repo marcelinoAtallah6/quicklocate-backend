@@ -1,5 +1,5 @@
 import { All, Body, Controller, Get, HttpException, HttpStatus, Inject, Param, Post, Req, Res } from '@nestjs/common';
-import { ApiService } from './apigateway.service';
+import { AppService } from './apigateway.service';
 import { ClientProxy } from '@nestjs/microservices';
 import { catchError, firstValueFrom, Observable, throwError, timeout } from 'rxjs';
 import { Request, Response } from 'express';
@@ -8,7 +8,7 @@ import { SERVICE } from 'src/common/constants/microservies';
 const INTERNAL_API_KEY = process.env.JWT_SECRET;
 
 @Controller('api')
-export class ApiController {
+export class AppController {
   private readonly clients: Map<string, ClientProxy> = new Map();
 
   constructor(

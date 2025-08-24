@@ -1,5 +1,5 @@
 import { All, Body, Controller, Get, HttpException, HttpStatus, Inject, Param, Post, Req, Res } from '@nestjs/common';
-import { ApiService } from './apigateway.service';
+import { AppService } from './apigateway.service';
 import { ClientProxy } from '@nestjs/microservices';
 import { catchError, firstValueFrom, Observable, throwError, timeout } from 'rxjs';
 import { Request, Response } from 'express';

@@ -15,7 +15,6 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
       isGlobal: true, 
     }),
     AuthModule,
-    
   ],
   controllers: [AppController],
   providers: [
